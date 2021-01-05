@@ -11,7 +11,6 @@ import Foundation
 import AGAudioPlayer
 import Observable
 import StoreKit
-import Crashlytics
 import AsyncDisplayKit
 
 extension AGAudioPlayerViewController : TrackStatusActionHandler {
@@ -418,6 +417,5 @@ extension PlaybackController : AGAudioPlayerLoggingDelegate {
             "playbackPosition": player.elapsed
         ])
         
-        Crashlytics.sharedInstance().recordError(err)
     }
 }

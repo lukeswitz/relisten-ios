@@ -8,7 +8,6 @@
 
 import Foundation
 import CleanroomLogger
-import Crashlytics
 
 // (farkas) I've intentionally omitted the info level here. In my experience the distinction between debug and info is too fuzzy and I'm never consistent about separating the two levels. It's simpler to just have three levels with the following meanings:
 //   Error: Something went really wrong and the app is about to crash (or would be better off crashing)
@@ -81,7 +80,7 @@ class CrashlyticsLogRecorder : LogRecorder {
     }
     
     func record(message: String, for entry: LogEntry, currentQueue: DispatchQueue, synchronousMode: Bool) {
-        CLSLogv("%@", getVaList([message]))
+        //CLSLogv("%@", getVaList([message]))
     }
     
 }

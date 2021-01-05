@@ -11,7 +11,6 @@ import Foundation
 import Cache
 import Siesta
 import Observable
-import Crashlytics
 
 public class RelistenCacher : ResponseTransformer {
     static let cacheName = "RelistenCache"
@@ -85,7 +84,6 @@ public class RelistenCacher : ResponseTransformer {
                 
                 return a
             } catch {
-                Crashlytics.sharedInstance().recordError(error, withAdditionalUserInfo: ["artist_uuid": artist_uuid])
                 LogError("Error fetching from cache artist with UUID=\(artist_uuid): \(error)")
             }
             
@@ -107,7 +105,6 @@ public class RelistenCacher : ResponseTransformer {
                 
                 return s
             } catch {
-                Crashlytics.sharedInstance().recordError(error, withAdditionalUserInfo: ["show_uuid": show_uuid])
                 LogError("Error fetching from cache show with UUID=\(show_uuid): \(error)")
             }
             

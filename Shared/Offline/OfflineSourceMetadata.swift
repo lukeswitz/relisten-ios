@@ -10,7 +10,6 @@ import Foundation
 
 import RealmSwift
 import Realm
-import Crashlytics
 
 @objc public protocol HasArtist {
     @objc var artist_uuid: String { get }

@@ -8,7 +8,6 @@
 
 import Foundation
 import SQLite
-import Crashlytics
 import SwiftyJSON
 
 public struct RelistenDbShowDocument {
@@ -130,7 +129,6 @@ public class RelistenDb {
     }
     
     func logError(_ error: Error, userInfo: [String: Any]) {
-        Crashlytics.sharedInstance().recordError(error, withAdditionalUserInfo: userInfo)
         LogError("Database error (\(error) with user info: \(userInfo)")
     }
     
