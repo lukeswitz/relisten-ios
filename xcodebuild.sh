@@ -12,7 +12,7 @@ command -v xcpretty >/dev/null 2>&1 || {
 }
 
 XCODE_ARGS="COMPILER_INDEX_STORE_ENABLE=NO CODE_SIGNING_REQUIRED=NO"
-XCODE_DESTINATION="platform=iOS Simulator,name=iPhone X"
+XCODE_DESTINATION="platform=iOS Simulator,name=iPhone 12"
 
 
 # bundle exec xcpretty -v
